@@ -38,7 +38,7 @@ namespace eProdaja.Services
 
         public Model.PregledNarudzbi Insert(PregledNarudzbiInsertRequest request)
         {
-            var query = _mapper.Map<List<Model.PregledNarudzbi>>(request);
+            var query = _mapper.Map<List<Database.PregledNarudzbi>>(request);
             _context.Add(query);
             _context.SaveChanges();
             return _mapper.Map<Model.PregledNarudzbi>(query);
